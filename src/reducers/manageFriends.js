@@ -1,8 +1,7 @@
 export function manageFriends(state, action){
-  const merge = ( ...objects ) => ( { ...objects } );
   switch (action.type){
     case 'ADD_FRIEND':
-      return merge(state.friends, [action.friend])
+      return {...state, friends: [...state.freinds, friend]}
     default:
       return state;
   }
